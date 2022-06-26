@@ -1,0 +1,438 @@
+@import url("animaciones.css");
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+/**menu de navegacion**/
+nav.menuNavigation{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3%;
+    padding: 2%;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: #Ffff;
+    z-index: 999;
+    transition: background 1s ease;
+    margin-bottom: 2vh;
+}
+body.dark nav.menuNavigation{
+    background: #131313;
+    color: #fff;
+    transition: background 1s ease;
+}
+nav.menuNavigation h1{
+    text-align: left;
+    width: 20%;
+    font-size: 4vh;
+    margin-right: auto;
+    color: #282828;
+    font-weight: 800;
+}
+body.dark nav.menuNavigation h1{
+    color: #fff;
+}
+.switch{
+    background:#282828;
+    border-radius:100px;
+    width: 4vw;
+    height: 4.5vh;
+    border:none;
+    position:relative;
+    cursor:pointer;
+    display:flex;
+    align-items: center;
+    outline:none;
+}
+.switch::after{
+    content:"";
+    display:block;
+    width: 4.5vh;
+    height: 4.5vh;
+    position:absolute;
+    background:#F1F1F1;
+    top:0;
+    left:0;
+    right:unset;
+    border-radius:100px;
+    transition:.3s ease all;
+    box-shadow:0px 0px 2px 2px rgba(0,0,0,.2);
+}
+.switch span{
+    width: 4.5vh;
+    height: 4.5vh;
+    line-height:30px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background:none;
+    color:#fff;
+}
+.switch span ion-icon{
+    font-size: 1.3em;
+}
+.switch.active{
+    background: #ffbd59;
+    color: #131313;
+}
+.switch.active::after{
+    right: 0;
+    left: unset;
+}
+
+ul.menuLinks{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+.menuLinks a{
+    width: 16.6%;
+}
+.menuLinks li {
+    text-align: center;
+    color: #131313;
+    width: 100%;
+    font-size: 2.4vh;
+    border-radius: 2vh;
+    font-weight: 700;
+}
+body.dark .menuLinks li{
+    color: #fff;
+    transition: background 1s ease;
+}
+.menuLinks li:hover{
+    color: #4639ff;
+}
+body.dark .menuLinks li:hover{
+    color: #4639ff;
+}
+li a,li a:active {
+    color: #131313;
+    text-decoration: none;
+}
+/**section de presentacion**/
+section.presentacion{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+    height: 65vh;
+    flex-wrap: wrap;
+    background: #4639ff;
+    border-radius: 2vh;
+    padding: 1.5%;
+    margin: 2vh;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 60%;
+}
+.presentacion img{
+    width: 20%;
+    border-radius:30% 70% 28% 72% / 33% 33% 67% 67%;
+    animation: Opacidad 4s ease ;
+}
+.description h2{
+    width: 100%;
+    height: 17vh;
+    color: #fff;
+    font-weight: 800;
+    font-size: 5vh;
+    animation: texto 2s ease;
+}
+.description h2 strong{
+    color: #ffbd59;
+    font-weight: 900;
+}
+.description p{
+    width: 100%;
+    color: #dddddd;
+    font-weight: 400;
+    font-size: 2.3vh;
+}
+.description ul{
+    display: flex;
+    gap: 5%;
+    width: 100%;
+    padding-block: 4%;
+}
+.description a{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #E0AFFF;
+    font-size: 2vh;
+}
+.description a:hover{
+    color: aliceblue;
+}
+.description ion-icon{
+    width: 4vh;
+    height: 4vh;
+}
+
+/**Sobre mi Section**/
+
+section.sobreMi{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    height: 80vh;
+    position: relative;
+    align-self: center;
+    border-radius: 2vh;
+    padding: 2%;
+    /* background: #ffbd59; */
+    text-align: center;
+}
+.description.sobreMi2{
+    justify-content: flex-start;
+    align-self: flex-start;
+    margin-top: 5%;
+}
+body.light .sobreMi .description.sobreMi2 > *{
+    color: #131313;
+}
+.sobreMi::after{
+    content: "";
+    width: 50vh;
+    height: 50vh;
+    position: absolute;
+    top: 20%;
+    right: 0%;
+    background: #ffbd59;
+    border-radius: 100%;
+    z-index: -1;
+    box-shadow: -15vh -5vh 0px 0px #4639ffc5;
+}
+.sobreMi h2{
+    animation: texto2 3s ease;
+    width: 100%;
+}
+.sobreMi p {
+    animation: Opacidad 2s ease-in;
+    width: 100%;
+}
+.sobreMi img{
+    width: 20%;
+    animation: ilustracion 5s linear infinite;
+}
+/**Skills**/
+
+section.skills{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin: 2vh;
+    width: 95%;
+    position: relative;
+    background: #4639ff;
+    border-radius: 2vh;
+    padding: 2%;
+}
+.skills h2{
+    width: 100%;
+    text-align: center;
+    font-size: 5vh;
+    animation: Opacidad 4s ease;
+}
+.skills ul{
+    display: flex;
+    width: 100%;
+    height: 30vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 5%;
+}
+.skills li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    font-size: 3vh;
+}
+.skills i{
+    font-size: 10vh;
+}
+.skills p{
+    margin-top: 2vh;
+}
+/**Hobbies**/
+section.hobbies{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin: 2vh;
+    width: 95%;
+    position: relative;
+    /* background: #4639ff; */
+    border-radius: 2vh;
+    padding: 2%;
+}
+.hobbies::after{
+    content: "";
+    width: 10vh;
+    right: 25%;
+    top: 20%;
+    height: 10vh;
+    position: absolute;
+    background: #4639ff;
+    border-radius: 100%;
+    z-index: -1;
+    box-shadow: -70vh -5vh 0px 0px #4639ffc5;
+    animation: ilustracion 7s ease infinite;
+}
+.hobbies::before{
+    content: "";
+    width: 20vh;
+    left: 10%;
+    bottom: 35%;
+    height: 20vh;
+    position: absolute;
+    background: #4639ff;
+    border-radius: 100%;
+    z-index: -1;
+    box-shadow: 70vw -5vh 0px 0px #4639ffc5;
+    animation: ilustracion 6s ease infinite;
+}
+.hobbies h2{
+    width: 100%;
+    text-align: center;
+    font-size: 5vh;
+    animation: texto 4s ease;
+}
+.hobbies ul{
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 2%;
+}
+.hobbies ul li{
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+    text-align: center;
+}
+.hobbies ul img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+.hobbies p{
+    margin-top: 4vh;
+}
+
+/**Formacion**/
+
+section.formacion{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    margin: 2vh;
+    width: 95%;
+    height: 90vh;
+    position: relative;
+    background: #ffbd59;
+    border-radius: 2vh;
+    padding: 2%;
+}
+.formacion h2{
+    width: 100%;
+    margin-bottom: 7vh;
+    text-align: center;
+    font-size: 5vh;
+    animation: Opacidad 4s ease;
+    color: #131313;
+}
+.formacion ul{
+    display: flex;
+    width: 55%;
+    color: #131313;
+    height:70%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-weight: 800;
+}
+.formacion ul li{
+    display: flex;
+    width: 50%;
+    min-height: 50%;
+    /* background: #4639ff; */
+    border-radius: 2vh;
+    flex-direction: column;
+    font-size: 3vh;
+}
+.formacion li h3{
+    width: 100%;
+    height: 3vh;
+    text-align: left;
+    font-size: 3vh;
+}
+.formacion p.lenguajes{
+    width: 100%;
+    height: 5vh;
+    background: transparent;
+    color: #fff;
+    font-weight: 600;
+}
+p.lenguajes small{
+    border-radius: 2vh;
+    background: #4639ff;
+}
+p.lenguajes small.javascript{
+    background: #ffff00;
+    color: #131313;
+}
+p.lenguajes small.php{
+    background: #1925cc;
+    color: #fff;
+}
+.formacion p {
+    /* width: 100%; */
+    padding-inline:2vh;
+    text-align: left;
+    align-self: flex-start;
+    font-size: 2vh;
+    background: #E0AFFF;
+    border-radius: 2vh;
+    margin-top: 3vh;
+}
+.formacion small{
+    /* width: 80%; */
+    padding-inline:2vh;
+    align-self: flex-start;
+    font-size: 1.7vh;
+    margin-top: 3vh;
+}
+.formacionTit{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3vh;
+}

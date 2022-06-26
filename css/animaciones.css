@@ -1,0 +1,36 @@
+@import url("principal.css");
+
+@keyframes texto {
+    0%{
+        margin-left: 100%;
+    }
+    100%{
+        margin-left: 0;
+    }
+}
+
+@keyframes Opacidad {
+    0%{
+        opacity: -4;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes ilustracion {
+    0%,100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes texto2 {
+    0%{
+        margin-left: -100%;
+    }
+    100%{
+        margin-right: 0;
+    }
+}
