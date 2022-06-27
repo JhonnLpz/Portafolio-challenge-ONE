@@ -23,6 +23,9 @@
         font-size: 3vh;
         width: 60%;
     }
+    .switch{
+        width: 80px;
+    }
     .menuNavigation ul{
         display: none;
         height: 50vh;
