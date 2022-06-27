@@ -1,8 +1,9 @@
 @media (min-width:901px) {
-    .menuMobile{
+    .menuMobile {
         display: none;
     }
 }
+
 @media (max-width:1120px) {
     .formacion ul {
         width: 100%;
@@ -15,18 +16,21 @@
 }
 
 @media (max-width:900px) {
-    nav.menuNavigation{
+    nav.menuNavigation {
         height: max-content;
     }
-    nav.menuNavigation h1{
+
+    nav.menuNavigation h1 {
         padding-left: 20px;
         font-size: 3vh;
         width: 60%;
     }
-    .switch{
+
+    .switch {
         width: 80px;
     }
-    .menuNavigation ul{
+
+    .menuNavigation ul {
         display: none;
         height: 50vh;
         justify-content: center;
@@ -34,10 +38,32 @@
         flex-direction: column;
         width: 100%;
     }
-    .menuNavigation ul a{
+
+    .menuNavigation ul a {
         width: 100%;
     }
-    .menuNavigation ul li{font-size: 3vh;}
+
+    .menuNavigation ul li {
+        font-size: 3vh;
+    }
+
+    .presentacion img {
+        width: 70%;
+    }
+
+    .description {
+        width: 90%;
+    }
+    .description h2{
+        width: 100%;
+        font-size: 3.5vh;
+    }
+    .description p{
+        font-size: 2vh;
+    }
+    .description ul{
+        padding-top: 10%;
+    }
 
     .formacion ul {
         flex-direction: column;

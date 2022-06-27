@@ -58,6 +58,9 @@ body.dark nav.menuNavigation h1{
     background: #F1F1F1;
     transition: transform .5s ease ;
 }
+body.light .menuMobile span{
+    background: #131313;
+}
 .menuMobile.active span#uno{
     visibility: hidden;
 }
@@ -156,11 +159,11 @@ section.presentacion{
     justify-content: space-around;
     align-items: center;
     width: 95%;
-    height: 65vh;
     flex-wrap: wrap;
     background: #4639ff;
     border-radius: 2vh;
     padding: 1.5%;
+    padding-block: 4%;
     margin: 2vh;
 }
 .description{
