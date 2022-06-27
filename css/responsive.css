@@ -62,9 +62,59 @@
         font-size: 2vh;
     }
     .description ul{
+        gap: 4%;
         padding-top: 10%;
     }
-
+    .description ul li{
+        width: 25%;
+    }
+    .sobreMi .description{
+        width: 100%;
+    }
+    .sobreMi::after{
+        width: 25vh;
+        height: 25vh;
+        top:80%;
+    }
+    .sobreMi img{
+        margin-left: 50%;
+        margin-top: 5vh;
+        width: 40%;
+        animation: none;
+    }
+    .skills li{
+        padding-block: 5%;
+        font-size: 2vh;
+        width: 33%;
+    }
+    .hobbies::after{
+        width: 5vh;
+        height: 5vh;
+        right: 10%;
+        box-shadow: -30vh -5vh 0px 0px #4639ffc5;
+    }
+    .hobbies::before{
+        width: 18vh;
+        height: 18vh;
+        left: 0;
+        bottom: 10%;
+        box-shadow: 50vw -5vh 0px 0px #4639ffc5;
+    }
+    .hobbies h2{
+        height: 10vh;
+    }
+    .hobbies ul{
+        gap: 0%;
+    }
+    .hobbies ul li{
+        padding-block: 5%;
+        width: 50% ;
+        font-size: 2.3vh;
+        font-weight: 600;
+    }
+    .formacion h2 {
+        margin-bottom: 0vh;
+    }
     .formacion ul {
         flex-direction: column;
         width: 100%;
@@ -78,4 +128,10 @@
     .formacion p.lenguajes {
         height: 7vh;
     }
+    .formacion img{
+        width: 100%;
+    }
+    /* .formacion li h3{
+        font-size: 2.2vh;
+    } */
 }

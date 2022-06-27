@@ -226,7 +226,7 @@ section.sobreMi{
     align-items: center;
     justify-content: space-between;
     width: 95%;
-    height: 80vh;
+    /* height: 80vh; */
     position: relative;
     align-self: center;
     border-radius: 2vh;
@@ -235,6 +235,7 @@ section.sobreMi{
     text-align: center;
 }
 .description.sobreMi2{
+    width: 67%;
     justify-content: flex-start;
     align-self: flex-start;
     margin-top: 5%;
@@ -253,14 +254,19 @@ body.light .sobreMi .description.sobreMi2 > *{
     border-radius: 100%;
     z-index: -1;
     box-shadow: -15vh -5vh 0px 0px #4639ffc5;
+    animation: ilustracion 7s ease infinite;
 }
 .sobreMi h2{
+    height: 13vh;
+    text-align: center;
     animation: texto2 3s ease;
     width: 100%;
 }
 .sobreMi p {
+    text-align: left;
     animation: Opacidad 2s ease-in;
     width: 100%;
+    font-size: 2.5vh;
 }
 .sobreMi img{
     width: 20%;
@@ -273,29 +279,32 @@ section.skills{
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    flex-wrap: wrap;
     margin: 2vh;
     width: 95%;
+    /* height: 70vh; */
     position: relative;
     background: #4639ff;
     border-radius: 2vh;
     padding: 2%;
+    padding-block: 5%;
 }
 .skills h2{
     width: 100%;
     text-align: center;
     font-size: 5vh;
+    padding-bottom: 3%;
     animation: Opacidad 4s ease;
 }
 .skills ul{
     display: flex;
     width: 100%;
-    height: 30vh;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-end;
-    gap: 5%;
 }
 .skills li{
+    width: 11%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -304,6 +313,7 @@ section.skills{
     font-size: 3vh;
 }
 .skills i{
+    align-self: center;
     font-size: 10vh;
 }
 .skills p{
@@ -325,9 +335,9 @@ section.hobbies{
 .hobbies::after{
     content: "";
     width: 10vh;
+    height: 10vh;
     right: 25%;
     top: 20%;
-    height: 10vh;
     position: absolute;
     background: #4639ff;
     border-radius: 100%;
@@ -338,9 +348,9 @@ section.hobbies{
 .hobbies::before{
     content: "";
     width: 20vh;
+    height: 20vh;
     left: 10%;
     bottom: 35%;
-    height: 20vh;
     position: absolute;
     background: #4639ff;
     border-radius: 100%;
@@ -350,6 +360,7 @@ section.hobbies{
 }
 .hobbies h2{
     width: 100%;
+    height: 20vh;
     text-align: center;
     font-size: 5vh;
     animation: texto 4s ease;
@@ -357,7 +368,7 @@ section.hobbies{
 .hobbies ul{
     display: flex;
     width: 100%;
-    height: 50vh;
+    /* height: 50vh; */
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-end;
@@ -486,4 +497,7 @@ p.lenguajes small.php{
 }
 .formacionTit small.fechas{
     padding: 0;
+}
+.formacion img{
+    width: 45%;
 }
