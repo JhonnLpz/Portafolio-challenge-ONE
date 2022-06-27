@@ -7,32 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/principal.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <title>Jhon Lopez - Portafolio</title>
 </head>
 
 <body class="light">
     <nav class="menuNavigation">
         <h1>Jhon López</h1>
-        <ul class="menuLinks">
-            <a href="#sobreMi">
-                <li>Sobre Mi</li>
-            </a>
-            <a href="#skills">
-                <li>Skills</li>
-            </a>
-            <a href="#hobbies">
-                <li>Hobbies</li>
-            </a>
-            <a href="#formacion">
-                <li>Formación</li>
-            </a>
-            <a href="#proyectos">
-                <li>Proyectos</li>
-            </a>
-            <a href="#contacto">
-                <li>Contacto</li>
-            </a>
-        </ul>
         <button class="switch" id="switch">
             <span>
                 <ion-icon name="flash"></ion-icon>
@@ -41,6 +22,32 @@
                 <ion-icon name="moon"></ion-icon>
             </span>
         </button>
+        <div class="menuMobile">
+            <span id="uno"></span>
+            <span id="dos"></span>
+            <span id="tres"></span>
+        </div>
+        <ul class="menuLinks">
+            <a class="menuOptions" href="#sobreMi">
+                <li>Sobre Mi</li>
+            </a>
+            <a class="menuOptions" href="#skills">
+                <li>Skills</li>
+            </a>
+            <a class="menuOptions" href="#hobbies">
+                <li>Hobbies</li>
+            </a>
+            <a class="menuOptions" href="#formacion">
+                <li>Formación</li>
+            </a>
+            <a class="menuOptions" href="#proyectos">
+                <li>Proyectos</li>
+            </a>
+            <a class="menuOptions" href="#contacto">
+                <li>Contacto</li>
+            </a>
+        </ul>
+
     </nav>
     <main>
         <section class="presentacion">
@@ -70,12 +77,6 @@
                         <a href="">
                             Twitter
                             <ion-icon name="logo-twitter"></ion-icon>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Instagram
-                            <ion-icon name="logo-instagram"></ion-icon>
                         </a>
                     </li>
                     <li>
@@ -195,9 +196,12 @@
                             <small class="php">PHP</small>
                             <small class="html">HTML</small>
                             <small class="css">CSS</small>
+                            <small class="php">MySql</small>
+                            <small class="angular">Git</small>
+                            <small class="css">Figma</small>
                         </p>
                         <p>SENA</p>
-                        <small>oct 2021 - enero 2023</small>
+                        <small class="fechas">oct 2021 - enero 2023</small>
                     </div>
                 </li>
                 <li>
@@ -205,19 +209,28 @@
                         <h3>Oracle ONE</h3>
                         <p class="lenguajes">
                             <small class="javascript">Javascript</small>
+                            <small class="html">HTML</small>
+                            <small class="css">CSS</small>
+                            <small class="angular">Git</small>
+                            <small class="css">Figma</small>
                         </p>
                         <p>Oracle y Alura LATAM</p>
-                        <small>Abril 2022 - Diciembre 2022 </small>
+                        <small class="fechas">Abril 2022 - Diciembre 2022 </small>
                     </div>
                 </li>
                 <li>
                     <div class="formacionTit">
                         <h3>Autodidacta</h3>
                         <p class="lenguajes">
+                            <small class="html">HTML</small>
+                            <small class="css">CSS</small>
                             <small class="javascript">Javascript</small>
+                            <small class="javascript">Python</small>
+                            <small class="angular">Angular</small>
+                            <small class="angular">Git</small>
                         </p>
                         <p>Autodidacta</p>
-                        <small>2021 - Actualidad</small>
+                        <small class="fechas">2021 - Actualidad</small>
                     </div>
                 </li>
                 <li>
@@ -227,7 +240,7 @@
                             <small class="javascript">Javascript</small>
                         </p>
                         <p>FreeCodeCamp</p>
-                        <small>Junio 2022 - Actualidad</small>
+                        <small class="fechas">Junio 2022 - Actualidad</small>
                     </div>
                 </li>
             </ul>

@@ -1,8 +1,27 @@
+// loader
 window.onload = () => {
     let contenedor = document.querySelector(".loader_container");
 
     contenedor.style.display = "none";
 }
+// menu Mobile
+
+let menuMobile = document.querySelector(".menuMobile");
+let menuList = document.querySelector(".menuLinks");
+let menuOptions = document.querySelectorAll(".menuOptions");
+
+menuMobile.addEventListener("click", () => {
+    menuMobile.classList.toggle("active");
+    menuList.classList.toggle("active");
+});
+
+menuOptions.forEach(option => {
+    option.addEventListener("click", () => {
+        menuMobile.classList.remove("active");
+        menuList.classList.remove("active");
+    })
+});
+// modo oscuro/claro
 
 let btnSwitch = document.querySelector(".switch");
 
@@ -32,3 +51,5 @@ if (localStorage.getItem('lightMode') === 'true') {
     btnSwitch.classList.remove('active');
     document.body.classList.add('dark');
 }
+
+// validacion formulario

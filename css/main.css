@@ -11,6 +11,7 @@
     scrollbar-color: #4639ff #131313;
 }
 body{
+    max-width: 100%;
     overflow-x: hidden;
     transition: background 1s ease;
 }
@@ -90,6 +91,12 @@ body.dark::-webkit-scrollbar-thumb {
     height: 10vh;
     border-color: #131313 #131313 transparent transparent;
     animation: rotation 1.5s linear infinite;
+}
+body.dark .loader_container{
+    background: #131313;
+}
+body.dark .loader::before{
+    border-color: #fff #fff transparent transparent;
 }
 @keyframes rotation {
     0% {

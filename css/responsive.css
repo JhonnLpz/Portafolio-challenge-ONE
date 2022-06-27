@@ -1,0 +1,52 @@
+@media (min-width:900px) {
+    .menuMobile{
+        display: none;
+    }
+}
+@media (max-width:1120px) {
+    .formacion ul {
+        width: 100%;
+        padding: 2vh;
+    }
+
+    .formacion p.lenguajes {
+        height: 7vh;
+    }
+}
+
+@media (max-width:900px) {
+    nav.menuNavigation{
+        height: max-content;
+    }
+    nav.menuNavigation h1{
+        padding-left: 20px;
+        font-size: 3vh;
+        width: 60%;
+    }
+    .menuNavigation ul{
+        display: none;
+        height: 50vh;
+        justify-content: center;
+        gap: 5%;
+        flex-direction: column;
+        width: 100%;
+    }
+    .menuNavigation ul a{
+        width: 100%;
+    }
+    .menuNavigation ul li{font-size: 3vh;}
+
+    .formacion ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 2vh;
+    }
+
+    .formacion ul li {
+        width: 100%;
+    }
+
+    .formacion p.lenguajes {
+        height: 7vh;
+    }
+}
