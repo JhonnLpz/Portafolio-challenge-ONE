@@ -1,14 +1,5 @@
 @import url("principal.css");
 
-@keyframes texto {
-    0%{
-        margin-left: 100%;
-    }
-    100%{
-        margin-left: 0;
-    }
-}
-
 @keyframes Opacidad {
     0%{
         opacity: -4;

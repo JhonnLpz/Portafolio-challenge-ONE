@@ -131,7 +131,51 @@
     .formacion img{
         width: 100%;
     }
-    /* .formacion li h3{
-        font-size: 2.2vh;
-    } */
+    .proyectos ul li{
+        width: 100%;
+    }
+    .proyectos::after{
+        width: 40vh;
+        height: 40vh;
+        top: 75%;
+        left: 0;
+        background: #ffbd59;
+        box-shadow: 5vh -25vh 0px 0px #4639ffc5;
+    }
+    .proyectos::before{
+        width: 30vh;
+        height: 30vh;
+        top: 10%;
+        box-shadow: 10vh 25vh 0px 0px #4639ffc5;
+    }
+    .contacto{
+        flex-direction: column;
+    }
+    .contacto .tarjetaContacto{
+        width: 100%;
+        padding: 10%;
+    }
+    .contacto .tarjetaContacto:after{
+        width: 30vh;
+        height: 30vh;
+        bottom:  -20%;
+        right: -20%;
+    }
+    .contacto .tarjetaContacto::before{
+        width: 20vh;
+        height: 20vh;
+        bottom: 35%;
+        right: -20%;
+    }
+
+    .contacto .contactoForm{
+        margin-top: 5vh;
+        width: 100%;
+    }
+    .contactoForm input,.contactoForm textarea{
+        width: 100%;
+    }
+    .contactoForm button{
+        width: 100%;
+    }
 }

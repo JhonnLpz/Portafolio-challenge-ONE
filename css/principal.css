@@ -14,7 +14,7 @@ nav.menuNavigation{
     flex-wrap: wrap;
     justify-content: flex-end;
     gap: 3%;
-    padding: 2%;
+    padding-inline: 2%;
     position: sticky;
     top: 0;
     width: 100%;
@@ -183,7 +183,7 @@ section.presentacion{
     color: #fff;
     font-weight: 800;
     font-size: 5vh;
-    animation: texto 2s ease;
+    animation: texto2 2s ease;
 }
 .description h2 strong{
     color: #ffbd59;
@@ -363,7 +363,7 @@ section.hobbies{
     height: 20vh;
     text-align: center;
     font-size: 5vh;
-    animation: texto 4s ease;
+    animation: texto2 4s ease;
 }
 .hobbies ul{
     display: flex;
@@ -405,7 +405,7 @@ section.formacion{
     padding: 2%;
 }
 body.dark .formacion{
-    background: #CB9753;
+    background: #4639ffe3;
 }
 .formacion h2{
     width: 100%;
@@ -426,7 +426,7 @@ body.dark .formacion{
     font-weight: 800;
 }
 body.dark .formacion ul{
-    color: #131313;
+    color: #fff;
 }
 .formacion ul li{
     display: flex;
@@ -486,10 +486,28 @@ p.lenguajes small{
     background: #4639ff;
     margin-top: 0;
 }
+p.lenguajes small.html{
+    background: orangered;
+    color: #fff;
+    font-weight: 800;
+}
+p.lenguajes small.css{
+    background: #2e51ee;
+    color: #fff;
+    font-weight: 800;
+}
 p.lenguajes small.javascript{
-    background: #ebeb04;
+    background: #fffc59;
     color: #131313;
     font-weight: 800;
+}
+p.lenguajes small.python{
+    background: #1e07f0;
+    color: #fff;
+    font-weight: 800;
+}
+p.lenguajes small.angular{
+    background: #ca0e0e;
 }
 p.lenguajes small.php{
     background: #1925cc;
@@ -500,4 +518,266 @@ p.lenguajes small.php{
 }
 .formacion img{
     width: 45%;
+}
+
+/**Proyects**/
+section.proyectos{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 2vh;
+    width: 95%;
+    position: relative;
+    border-radius: 2vh;
+    padding: 2%;
+}
+.proyectos::after{
+    content: "";
+    width: 50vh;
+    height: 50vh;
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    background: #ffbd59;
+    border-radius: 100%;
+    z-index: -1;
+    box-shadow: 55vh -5vh 0px 0px #4639ffc5;
+    animation: ilustracion 7s ease infinite;
+}
+.proyectos::before{
+    content: "";
+    width: 40vh;
+    height: 40vh;
+    position: absolute;
+    top: 30%;
+    right: 30%;
+    background: #ffbd59;
+    border-radius: 100%;
+    z-index: -1;
+    box-shadow: 55vh -5vh 0px 0px #4639ffc5;
+    animation: ilustracion 9s linear infinite;
+}
+.proyectos h2{
+    width: 100%;
+    margin-bottom: 7vh;
+    text-align: center;
+    font-size: 5vh;
+    animation: Opacidad 4s ease;
+}
+.proyectos ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1%;
+}
+.proyectos ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    background: #4639ff;
+    border-radius: 2vh;
+    overflow: hidden;
+    margin-block: 2vh;
+}
+.proyectos img{
+    border-radius: 2vh;
+    border: #4639ff 0.7vh solid;
+    width: 100%;
+    aspect-ratio: 18 / 9;
+}
+.proyectos li h3{
+    padding: 1vh;
+    padding-inline: 2vh;
+    width: 100%;
+    color: #F1F1F1;
+    font-size: 4vh;
+}
+.proyectos li .botones{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    color: #F1F1F1;
+}
+.proyectos li button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: none;
+    width: 50%;
+    height: 6vh;
+    background: #131313;
+    color: #F1F1F1;
+}
+body.dark .proyectos li button{
+    background: #F1F1F1;
+    color: #131313;
+}
+.proyectos li button:hover,
+.proyectos li button:active,
+.proyectos li button a:hover{
+    background: #ffbd59;
+    color: #131313;
+}
+.proyectos li button a{
+    font-size: 2.3vh;
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+    padding-block: 5%;
+    color: #F1F1F1;
+    text-align: center;
+}
+body.dark .proyectos li button a{
+    color: #131313;
+}
+
+/**Contact**/
+
+section.contacto{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    margin: 2vh;
+    width: 95%;
+    position: relative;
+    border-radius: 2vh;
+    padding: 2%;
+    /* background: #4639ff; */
+}
+.contacto h2{
+    width: 100%;
+    margin-bottom: 7vh;
+    text-align: center;
+    font-size: 5vh;
+    animation: Opacidad 4s ease;
+}
+.contacto .tarjetaContacto{
+    width: 35%;
+    background: #4639ff;
+    border-radius: 3vh;
+    padding: 3%;
+    color: #F1F1F1;
+    position: relative;
+    overflow: hidden;
+}
+.contacto .tarjetaContacto::after{
+    position: absolute;
+    content: "";
+    bottom: -35%;
+    right: -33%;
+    width: 50vh;
+    height: 50vh;
+    border-radius: 100%;
+    background: #ffbd59;
+}
+.contacto .tarjetaContacto::before{
+    position: absolute;
+    content: "";
+    bottom: 30%;
+    right: -10%;
+    border-radius: 100%;
+    width: 20vh;
+    height: 20vh;
+    background: #7970f5;
+    z-index: 2;
+}
+.tarjetaContacto h3{
+    width: 100%;
+    height: 10vh;
+    font-size: 4vh;
+}
+.tarjetaContacto ul.contacto{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10%;
+    width: 100%;
+    height: 30vh;
+    margin-block: 2vh;
+}
+ul.contacto li{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4%;
+    width: 100%;
+    font-size: 3vh;
+}
+ul.contacto li a {
+    text-decoration: none;
+    color: #F1F1F1;
+}
+.tarjetaContacto ul.redes{
+    display: flex;
+    align-items: center;
+}
+ul.redes li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 15%;
+    height: 8vh;
+}
+
+ul.redes li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    font-size: 4vh;
+    padding: 1vh;
+    color: #F1F1F1;
+}
+ul.redes li a:hover{
+    background: #131313;
+}
+
+.contacto .contactoForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+.contactoForm input,.contactoForm textarea{
+    width: 80%;
+    height: 7vh;
+    margin-block: 1.5vh;
+    padding: 1vh;
+    border: 0.5vh #4639ff solid;
+    outline: none;
+    border-radius: 2vh;
+    font-weight: 600;
+    resize: none;
+    background: transparent;
+}
+body.dark .contactoForm input,
+body.dark .contactoForm textarea{
+    color: #F1F1F1;
+}
+.contactoForm textarea{
+    height: 14vh;
+}
+.contactoForm button{
+    width: 33%;
+    height: 6vh;
+    border-radius: 2vh;
+    border: none;
+    background: #4639ff;
+    color: #F1F1F1;
+    font-weight: 600;
+    font-size: 3vh;
+    cursor: pointer;
 }
