@@ -167,7 +167,9 @@
         bottom: 35%;
         right: -20%;
     }
-
+    .tarjetaContacto h3{
+        height: 13vh;
+    }
     .contacto .contactoForm{
         margin-top: 5vh;
         width: 100%;
