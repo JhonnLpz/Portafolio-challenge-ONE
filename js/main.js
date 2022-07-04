@@ -53,3 +53,9 @@ if (localStorage.getItem('lightMode') === 'true') {
 }
 
 // validacion formulario
+
+const form = document.querySelector('.contactoForm');
+
+form.addEventListener('submit',(evento)=>{
+    evento.preventDefault()
+})

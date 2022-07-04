@@ -17,10 +17,12 @@ nav.menuNavigation{
     position: sticky;
     top: 0;
     width: 100%;
-    height: 80px;
+    /* height: 80px; */
+    height: 12vh;
     background: #Ffff;
     z-index: 999;
     transition: background 1s ease;
+    border-bottom: #4639ff 0.5vh solid;
 }
 body.dark nav.menuNavigation{
     background: #131313;
@@ -28,6 +30,7 @@ body.dark nav.menuNavigation{
     transition: background 1s ease;
 }
 nav.menuNavigation h1{
+    text-decoration: none;
     text-align: left;
     width: 20%;
     font-size: 4vh;
@@ -35,7 +38,11 @@ nav.menuNavigation h1{
     color: #282828;
     font-weight: 800;
 }
-body.dark nav.menuNavigation h1{
+nav.menuNavigation h1 a{
+    color: #282828;
+}
+body.dark nav.menuNavigation h1 a{
+    text-decoration: none;
     color: #fff;
 }
 .menuMobile{
@@ -105,7 +112,7 @@ body.light .menuMobile span{
     color:#fff;
 }
 .switch span ion-icon{
-    font-size: 1.3em;
+    font-size: 2.3vh;
 }
 .switch.active{
     background: #ffbd59;
@@ -163,17 +170,39 @@ section.presentacion{
     padding: 1.5%;
     padding-block: 4%;
     margin-top: 2vh;
+    position: relative;
+    overflow: hidden;
+}
+.presentacion::after{
+    content: "";
+    position: absolute;
+    top: -2%;
+    left: -10%;
+    width: 50%;
+    height: 100%;
+    background: url("/img/circulosFondo.svg") no-repeat;
+}
+.presentacion::before{
+    content: "";
+    position: absolute;
+    bottom: -15%;
+    right: -20%;
+    width: 50%;
+    height: 100%;
+    background: url("/img/circulosFondo2.svg") no-repeat;
 }
 .description{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     width: 60%;
+    z-index: 2;
 }
 .presentacion img{
     width: 20%;
     border-radius:30% 70% 28% 72% / 33% 33% 67% 67%;
     animation: Opacidad 4s ease ;
+    z-index: 2;
 }
 .description h2{
     width: 100%;
@@ -228,7 +257,7 @@ section.sobreMi{
     position: relative;
     align-self: center;
     border-radius: 2vh;
-    padding: 2%;
+    padding-inline: 2%;
     /* background: #ffbd59; */
     text-align: center;
 }
@@ -383,6 +412,8 @@ section.hobbies{
     aspect-ratio: 1 / 1;
 }
 .hobbies p{
+    font-size: 2vh;
+    font-weight: 600;
     margin-top: 4vh;
 }
 
@@ -693,6 +724,9 @@ section.contacto{
     height: 10vh;
     font-size: 4vh;
 }
+.tarjetaContacto p{
+    font-size: 2vh;
+}
 .tarjetaContacto ul.contacto{
     display: flex;
     justify-content: center;
@@ -710,10 +744,12 @@ ul.contacto li{
     gap: 4%;
     width: 100%;
     font-size: 2.3vh;
+    z-index: 4;
 }
 ul.contacto li a {
     text-decoration: none;
     color: #F1F1F1;
+    font-weight: 600;
 }
 .tarjetaContacto ul.redes{
     display: flex;
@@ -725,8 +761,8 @@ ul.redes li {
     align-items: center;
     width: 15%;
     height: 8vh;
+    z-index: 4;
 }
-
 ul.redes li a{
     display: flex;
     justify-content: center;
@@ -738,10 +774,6 @@ ul.redes li a{
     padding: 1vh;
     color: #F1F1F1;
 }
-ul.redes li a:hover{
-    background: #131313;
-}
-
 .contacto .contactoForm{
     display: flex;
     flex-direction: column;
@@ -766,10 +798,12 @@ ul.redes li a:hover{
 body.dark .contactoForm input::placeholder,
 body.dark .contactoForm textarea::placeholder{
     color: #dadada;
+    font-size: 2vh;
 }
 body.light .contactoForm input::placeholder,
 body.light .contactoForm textarea::placeholder{
     color: #131313;
+    font-size: 2vh;
 }
 body.dark .contactoForm input,
 body.dark .contactoForm textarea{
@@ -804,4 +838,51 @@ body.light .contacto .contactoForm textarea::-webkit-scrollbar {
     font-weight: 600;
     font-size: 3vh;
     cursor: pointer;
+}
+
+/**footer**/
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background: #4639ff;
+    font-size: 3vh;
+    color: #F1F1F1;
+    text-align: center;
+    position: relative;
+    margin-top: 15%;
+}
+footer::before{
+    content: "";
+    width: 100%;
+    height:31vh;
+    background: url("/img/separador.svg") no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -73%;
+}
+footer .footerRedes{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    align-items: center;
+    width: 100%;
+    padding-block: 5%;
+}
+footer a,
+footer h2 a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+}
+footer h2{
+    z-index: 2;
+}
+footer ion-icon{
+    font-size: 7vh;
 }

@@ -15,7 +15,7 @@
 
     <main>
         <nav class="menuNavigation">
-            <h1>Jhon López</h1>
+            <h1><a href="index.html">Jhon López</a></h1>
             <button class="switch" id="switch">
                 <span>
                     <ion-icon name="flash"></ion-icon>
@@ -355,17 +355,30 @@
             </div>
             <form action="post" class="contactoForm">
                 <img src="" alt="">
-                <input type="text" placeholder="Nombre" required maxlength="50" title="hola">
-                <input type="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-                <input type="text" placeholder="Asunto" required>
-                <textarea placeholder="Mensaje" required></textarea>
+                <input type="text" name="nombre" placeholder="Nombre" required maxlength="50" title="Ingresa tu nombre">
+                <input type="email" name="email" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Ingresa tu correo">
+                <input type="text" name="asunto"  placeholder="Asunto" required title="Ingresa el asunto">
+                <textarea name="mensaje" placeholder="Mensaje" required title="Ingresa tu mensaje"></textarea>
                 <button class="button">Enviar Mensaje</button>
             </form>
         </section>
 
-
         <footer>
-            <h2><a href="https://github.com/JhonnLpz">Jhon Lopez &copy;</a><br>Todos los derechos reservados</h2>
+            <h2>
+                <a href="https://github.com/JhonnLpz" target="_blank">
+                    Jhon Lopez &copy;
+                </a>
+                Todos los derechos reservados
+            </h2>
+            <div class="footerRedes">
+                <a href="">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a href="">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+            </div>
+
         </footer>
     </main>
 
