@@ -11,7 +11,6 @@
     scrollbar-color: #4639ff #131313;
 }
 body{
-    max-width: 100%;
     overflow-x: hidden;
     transition: background 1s ease;
 }
@@ -26,20 +25,20 @@ body.light{
     transition: background 1s ease;
 }
 /**Color barra scroll chrome**/
-body.light::-webkit-scrollbar {
+body.light::-webkit-scrollbar{
     background-color: #ffff;
     width: 10px;
 }
-body.light::-webkit-scrollbar-thumb {
+body.light::-webkit-scrollbar-thumb{
     background: #4639ff;
     border-radius: 2vh;
 }
 
-body.dark::-webkit-scrollbar {
+body.dark::-webkit-scrollbar{
     background-color: #131313;
     width: 10px;
 }
-body.dark::-webkit-scrollbar-thumb {
+body.dark::-webkit-scrollbar-thumb{
     background: #4639ff;
     border-radius: 2vh;
 }

@@ -5,7 +5,6 @@ main{
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 100%;
 }
 /**menu de navegacion**/
 nav.menuNavigation{
@@ -18,11 +17,10 @@ nav.menuNavigation{
     position: sticky;
     top: 0;
     width: 100%;
-    height: 70px;
+    height: 80px;
     background: #Ffff;
     z-index: 999;
     transition: background 1s ease;
-    margin-bottom: 2vh;
 }
 body.dark nav.menuNavigation{
     background: #131313;
@@ -47,7 +45,7 @@ body.dark nav.menuNavigation h1{
     align-items: center;
     gap: 5px;
     width: 45px;
-    height: 45px;
+    height: 80px;
     border-radius: 2vh;
     cursor: pointer;
 }
@@ -164,7 +162,7 @@ section.presentacion{
     border-radius: 2vh;
     padding: 1.5%;
     padding-block: 4%;
-    margin: 2vh;
+    margin-top: 2vh;
 }
 .description{
     display: flex;
@@ -280,7 +278,7 @@ section.skills{
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    margin: 2vh;
+    margin-top: 2vh;
     width: 95%;
     /* height: 70vh; */
     position: relative;
@@ -325,7 +323,7 @@ section.hobbies{
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    margin: 2vh;
+    margin-top: 2vh;
     width: 95%;
     position: relative;
     /* background: #4639ff; */
@@ -396,7 +394,7 @@ section.formacion{
     align-items: flex-start;
     /* flex-direction: column; */
     flex-wrap: wrap;
-    margin: 2vh;
+    margin-top: 2vh;
     width: 95%;
     /* height: 90vh; */
     position: relative;
@@ -527,7 +525,7 @@ section.proyectos{
     align-items: flex-start;
     flex-direction: column;
     flex-wrap: wrap;
-    margin: 2vh;
+    margin-top: 2vh;
     width: 95%;
     position: relative;
     border-radius: 2vh;
@@ -646,7 +644,7 @@ section.contacto{
     align-items: flex-start;
     /* flex-direction: column; */
     flex-wrap: wrap;
-    margin: 2vh;
+    margin-top: 2vh;
     width: 95%;
     position: relative;
     border-radius: 2vh;
@@ -750,11 +748,12 @@ ul.redes li a:hover{
     justify-content: center;
     align-items: center;
     width: 60%;
+    height: 70vh;
 }
 .contactoForm input,.contactoForm textarea{
     width: 80%;
-    height: 7vh;
-    margin-block: 1.5vh;
+    height: 10vh;
+    margin-block: 2.5vh;
     padding: 1vh;
     border: 0.5vh #4639ff solid;
     outline: none;
@@ -762,10 +761,35 @@ ul.redes li a:hover{
     font-weight: 600;
     resize: none;
     background: transparent;
+    position: relative;
+}
+body.dark .contactoForm input::placeholder,
+body.dark .contactoForm textarea::placeholder{
+    color: #dadada;
+}
+body.light .contactoForm input::placeholder,
+body.light .contactoForm textarea::placeholder{
+    color: #131313;
 }
 body.dark .contactoForm input,
 body.dark .contactoForm textarea{
     color: #F1F1F1;
+}
+body.dark .contacto .contactoForm textarea::-webkit-scrollbar-thumb {
+    background: #4639ff;
+    border-radius: 2vh;
+}
+body.dark .contacto .contactoForm textarea::-webkit-scrollbar{
+    background-color: #131313;
+    width: 10px;
+}
+body.light .contacto .contactoForm textarea::-webkit-scrollbar-thumb {
+    background: #4639ff;
+    border-radius: 2vh;
+}
+body.light .contacto .contactoForm textarea::-webkit-scrollbar {
+    background-color: #ffff;
+    width: 10px;
 }
 .contactoForm textarea{
     height: 14vh;
