@@ -13,7 +13,7 @@
 
 <body class="light">
 
-    <main>
+    <main id="inicio">
         <nav class="menuNavigation">
             <h1><a href="index.html">Jhon López</a></h1>
             <button class="switch" id="switch">
@@ -63,19 +63,19 @@
                 </p>
                 <ul>
                     <li>
-                        <a href="">
+                        <a href="https://www.linkedin.com/in/jhonlopez11/" target="_blank">
                             Linkedin
                             <ion-icon name="logo-linkedin"></ion-icon>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="https://github.com/JhonnLpz" target="_blank">
                             Github
                             <ion-icon name="logo-github"></ion-icon>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="https://twitter.com/_LopezJhon" target="_blank">
                             Twitter
                             <ion-icon name="logo-twitter"></ion-icon>
                         </a>
@@ -296,8 +296,8 @@
                     <h3>Ahorcado <small>(en proceso)</small></h3>
                     <p></p>
                     <div class="botones">
-                        <button disabled>Ver demo</button>
-                        <button disabled>Repositorio</button>
+                        <button disabled title="Temporalmente no disponible">Ver demo</button>
+                        <button disabled title="Temporalmente no disponible">Repositorio</button>
                     </div>
 
                 </li>
@@ -353,15 +353,69 @@
                     </li>
                 </ul>
             </div>
-            <form action="post" class="contactoForm">
-                <img src="" alt="">
-                <input type="text" name="nombre" placeholder="Nombre" required maxlength="50" title="Ingresa tu nombre">
-                <input type="email" name="email" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Ingresa tu correo">
-                <input type="text" name="asunto"  placeholder="Asunto" required title="Ingresa el asunto">
-                <textarea name="mensaje" placeholder="Mensaje" required title="Ingresa tu mensaje"></textarea>
-                <button class="button">Enviar Mensaje</button>
+            <!-- formulario -->
+            <form method="post" action="" class="contactoForm" autocomplete="off" autocapitalize="on">
+
+                <!-- Nombre -->
+                <div class="formularioGrupo">
+                    <label for="nombre" class="formLabel" autocapitalize="on">Nombre</label>
+                    <div class="formGrupoInput">
+                        <input class="formInput" id="nombre" type="text" name="nombre" placeholder="Jhon lopez" required
+                            maxlength="50" title="Ingresa tu nombre">
+                        <i class="validacionEstado fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <p class="formInputError">El nombre no debe contener numeros o estar vacio</p>
+                </div>
+
+                <!-- E-mail -->
+                <div class="formularioGrupo">
+                    <label for="email" class="formLabel">E-mail</label>
+                    <div class="formGrupoInput">
+                        <input class="formInput" id="email" type="email" name="email" placeholder="ejemplo@correo.com"
+                            required title="Ingresa tu correo">
+                        <i class="validacionEstado fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <p class="formInputError">Ingresa un email valido</p>
+                </div>
+
+                <!-- Asunto -->
+                <div class="formularioGrupo">
+                    <label for="asunto" class="formLabel">Asunto</label>
+                    <div class="formGrupoInput">
+                        <input class="formInput" id="asunto" type="text" name="asunto" placeholder="Contratacion"
+                            required title="Ingresa el asunto">
+                        <i class="validacionEstado fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <p class="formInputError">El asunto no puede estar vacio</p>
+                </div>
+
+                <!-- Mensaje -->
+                <div class="formularioGrupo">
+                    <label for="mensaje" class="formLabel">Mensaje</label>
+                    <div class="formGrupoInput">
+                        <textarea class="formInput" id="mensaje" name="mensaje"
+                            placeholder="Hola soy... y te escribo porque..." required
+                            title="Ingresa tu mensaje"></textarea>
+                        <i class="validacionEstado fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <p class="formInputError">El mensaje no puede estar vacio</p>
+                </div>
+
+                <div class="formularioMensaje" id="formularioMensaje">
+                    <p><i class="fa-solid fa-circle-exclamation"></i><strong>Error: </strong> Todos los campos deben
+                        estar diligenciados</p>
+                </div>
+
+                <div class="formularioGrupo formGrupoBtnEnviar">
+                    <p class="formMensajeExito" id="formMensajeExito">Formulario enviado exitosamente</p>
+                    <button type="submit" id="button">Enviar</button>
+                </div>
             </form>
         </section>
+
+        <a href="#inicio" id="botonUp">
+            <i class="fas fa-chevron-up"></i>
+        </a>
 
         <footer>
             <h2>

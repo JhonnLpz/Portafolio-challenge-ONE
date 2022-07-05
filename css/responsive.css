@@ -187,20 +187,22 @@
 
     ul.redes li a{
         font-size: 5vh;
-    color: #131313;
+        color: #131313;
     }
-    .contacto .contactoForm{
-        margin-top: 5vh;
+    .contactoForm{
+        width: 100%;
+        padding-top: 15%;
+    }
+    .formularioGrupo{
+        width: 95%;
+        font-size: 3vh;
+    }
+    .formularioGrupo #mensaje{
+        height: 13vh;
+    }
+    .formGrupoBtnEnviar #button{
         width: 100%;
     }
-    .contactoForm input,.contactoForm textarea{
-        width: 100%;
-        font-size: 2vh;
-    }
-    .contactoForm button{
-        width: 100%;
-    }
-
     footer{
         text-align: left;
         font-size: 2vh;

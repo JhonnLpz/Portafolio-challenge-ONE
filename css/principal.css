@@ -6,7 +6,8 @@ main{
     flex-direction: column;
     flex-wrap: wrap;
 }
-/**menu de navegacion**/
+/************ Menu de navegacion *************/
+
 nav.menuNavigation{
     display: flex;
     align-items: center;
@@ -17,7 +18,6 @@ nav.menuNavigation{
     position: sticky;
     top: 0;
     width: 100%;
-    /* height: 80px; */
     height: 12vh;
     background: #Ffff;
     z-index: 999;
@@ -618,14 +618,16 @@ section.proyectos{
     border-radius: 2vh;
     border: #4639ff 0.7vh solid;
     width: 100%;
+    height: 50%;
     aspect-ratio: 18 / 9;
 }
 .proyectos li h3{
     padding: 1vh;
     padding-inline: 2vh;
     width: 100%;
+    height: 7vh;
     color: #F1F1F1;
-    font-size: 4vh;
+    font-size: 3vh;
 }
 .proyectos li .botones{
     display: flex;
@@ -689,8 +691,9 @@ section.contacto{
     font-size: 5vh;
     animation: Opacidad 4s ease;
 }
-.contacto .tarjetaContacto{
+.tarjetaContacto{
     width: 35%;
+    height: 75vh;
     background: #4639ff;
     border-radius: 3vh;
     padding: 3%;
@@ -721,10 +724,11 @@ section.contacto{
 }
 .tarjetaContacto h3{
     width: 100%;
-    height: 10vh;
+    /* height: 10vh; */
     font-size: 4vh;
 }
 .tarjetaContacto p{
+    padding-top: 2vh;
     font-size: 2vh;
 }
 .tarjetaContacto ul.contacto{
@@ -774,36 +778,129 @@ ul.redes li a{
     padding: 1vh;
     color: #F1F1F1;
 }
-.contacto .contactoForm{
+/*formulario*/
+.contactoForm{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 60%;
-    height: 70vh;
+    flex-wrap: wrap;
+    gap: 5%;
+    width: 63%;
 }
-.contactoForm input,.contactoForm textarea{
-    width: 80%;
-    height: 10vh;
-    margin-block: 2.5vh;
-    padding: 1vh;
-    border: 0.5vh #4639ff solid;
-    outline: none;
-    border-radius: 2vh;
-    font-weight: 600;
-    resize: none;
-    background: transparent;
+.formularioGrupo{
+    width: 40%;
+    height: 25vh;
+}
+.formLabel{
+    display: block;
+    font-weight: 700;
+    font-size: 3vh;
+    padding: 2%;
+    cursor: pointer;
+}
+.formGrupoInput{
     position: relative;
 }
-body.dark .contactoForm input::placeholder,
-body.dark .contactoForm textarea::placeholder{
-    color: #dadada;
+.formInput,#mensaje{
+    width: 100%;
+    height: 10vh;
+    font-size: 2vh;
+    font-weight: 600;
+    padding-left: 1vh;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 0.5vh solid #4639ff;
+    transition: .5s ease all;
+    resize: none;
+}
+.formInput:focus,#mensaje:focus{
+    outline: none;
+    border-bottom: 0.5vh solid #ffbd59;
+}
+.formInputError{
+    display: none;
     font-size: 2vh;
 }
-body.light .contactoForm input::placeholder,
-body.light .contactoForm textarea::placeholder{
-    color: #131313;
+.formInputError.active{
+    display: block;
+}
+.validacionEstado{
+    position: absolute;
+    right: 5%;
+    top: 30%;
+    opacity: 0;
+}
+.formGrupoBtnEnviar,
+.formularioMensaje{
+    width: 85%;
+}
+.formularioMensaje{
+    background: red;
+    padding: 1vh;
+    border-radius: 2vh;
+    display: none;
+}
+.formularioMensaje.active{
+    display: block;
+}
+.formGrupoBtnEnviar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formGrupoBtnEnviar #button{
+    width: 50%;
+    height: 8vh;
+    cursor: pointer;
+    transition: .1s ease all;
+    border: none;
+    border-radius: 1vh;
+    font-size: 3.5vh;
+    line-height:8vh ;
+    font-weight: 600;
+    color: #F1F1F1;
+    background: #4639ff;
+}
+.formGrupoBtnEnviar #button:hover{
+    background: #7970f5;
+    transition: .3s ease all;
+}
+.formMensajeExito{
+    display: none;
+    text-align: center;
+    font-size:2.5vh ;
+    width: 80%;
+    padding: 1vh;
+    border-radius: 2vh;
+    margin-block: 3vh;
+    background: #078307;
+}
+.formMensajeExito.active{
+    display: block;
+}
+.contactoForm input::placeholder,
+.contactoForm textarea::placeholder{
+    color: #9c9c9c;
     font-size: 2vh;
+}
+
+/*estilos validacion*/
+
+.formularioGrupo.correcto .validacionEstado{
+    color: #078307;
+    opacity: 1;
+}
+.formularioGrupo.incorrecto .formLabel{
+    color: #ff3939;
+}
+.formularioGrupo.incorrecto .validacionEstado{
+    color: #ff3939;
+    opacity: 1;
+}
+.formularioGrupo.incorrecto .formInput,
+.formularioGrupo.incorrecto #mensaje{
+    border-bottom:0.5vh solid #ff3939 ;
 }
 body.dark .contactoForm input,
 body.dark .contactoForm textarea{
@@ -825,22 +922,27 @@ body.light .contacto .contactoForm textarea::-webkit-scrollbar {
     background-color: #ffff;
     width: 10px;
 }
-.contactoForm textarea{
-    height: 14vh;
-}
-.contactoForm button{
-    width: 33%;
-    height: 6vh;
-    border-radius: 2vh;
-    border: none;
-    background: #4639ff;
-    color: #F1F1F1;
-    font-weight: 600;
-    font-size: 3vh;
-    cursor: pointer;
-}
 
-/**footer**/
+/************ boton de ir hacia arriba *******/
+#botonUp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 50px;
+    bottom: 70px;
+    width: 60px;
+    height: 60px;
+    background: #ffbd59;
+    border: #131313 .3vh solid;
+    color: #131313;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999;
+    transform: scale(0) ;
+    transition: transform .5s ease;
+}
+/************ footer ****************/
 
 footer{
     display: flex;

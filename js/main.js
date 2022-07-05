@@ -4,6 +4,22 @@ window.onload = () => {
 
     contenedor.style.display = "none";
 }
+
+// boton de ir hacia arriba
+
+let btnUp = document.querySelector("#botonUp");
+
+window.onscroll = ()=>{
+
+    let scroll = document.documentElement.scrollTop;
+
+    if (scroll > 100) {
+        btnUp.style.transform = "scale(1)"
+    }else{
+        btnUp.style.transform = "scale(0)"
+    }
+}
+
 // menu Mobile
 
 let menuMobile = document.querySelector(".menuMobile");
@@ -55,7 +71,17 @@ if (localStorage.getItem('lightMode') === 'true') {
 // validacion formulario
 
 const form = document.querySelector('.contactoForm');
+const formEmail = document.querySelector("#email");
+const validateRegEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+const formButton = document.getElementsByClassName("button");
 
-form.addEventListener('submit',(evento)=>{
-    evento.preventDefault()
+form.addEventListener('submit', (evento) => {
+    evento.preventDefault();
+
+    if (validateRegEx.test(formEmail.value)) {
+        alert("correo valido")
+    } else {
+        alert("correo invalido")
+    }
 })
+
