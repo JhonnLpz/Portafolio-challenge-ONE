@@ -37,6 +37,7 @@ menuOptions.forEach(option => {
         menuList.classList.remove("active");
     })
 });
+
 // modo oscuro/claro
 
 let btnSwitch = document.querySelector(".switch");
@@ -78,20 +79,18 @@ const expresiones = {
     user: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
     name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
     email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    subject: /^[A-Za-z0-9\s]+$/g, // Letras y espacios, pueden llevar acentos.
+    subject: /^[A-Za-z0-9\s]+$/g
 }
 
 const validateForm = (event) => {
     switch (event.target.name) {
         case 'nombre':
-        console.log("nombree");
+            
         break;
         case 'email':
-            console.log("emaillll");
 
         break;
         case 'asunto':
-            console.log("asuntoo");
 
         break;
 
